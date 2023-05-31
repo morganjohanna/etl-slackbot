@@ -18,6 +18,6 @@ with pg_client_connect as conn:
         post = data_pull[i]
         title = post[0]
         score = float(post[1])
-        data = { "text": f"Reddit post \"{title}\" has a sentiment score of {score}"} 
+        data = {"text": f"Reddit post \"{title}\" has a sentiment score of {score}"} 
         requests.post(url = webhook_url, json = data)
         time.sleep(3600)

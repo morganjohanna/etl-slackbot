@@ -32,10 +32,6 @@ services:
     - 5555:5432
     env_file:
     - .env
-    environment:
-    - POSTGRES_USER=docker_user
-    - POSTGRES_PASSWORD=12345
-    - POSTGRES_DB=reddit
 
   slackbot:
     build: slackbot/
